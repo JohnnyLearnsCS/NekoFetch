@@ -37,7 +37,7 @@ neko
 ### Option 2: Easy Shell Installer
 
 ```bash
-git clone https://github.com/YOURNAME/nekofetch.git
+git clone https://github.com/JohnnyLearnsCS/nekofetch.git
 cd nekofetch
 bash install.sh
 ```
