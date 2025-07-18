@@ -1,51 +1,110 @@
+# 🐾 NekoFetch - File & Video Scraper CLI
 
-"""
-# NekoFetch - CLI File & Video Scraper 🐾
+NekoFetch is a terminal-based intelligent file and media scraper that lets users search, find, and optionally download documents, media, and files across the internet.
 
-NekoFetch is a powerful and flexible terminal-based tool for scraping and downloading files across the web, including videos, documents, images, archives, and more.
+Supports: `.pdf`, `.zip`, `.mkv`, `.mp4`, `.mp3`, `.jpg`, `.png`, subtitles, and more.
 
-## Features
+---
 
-- Search or scrape directly from a URL
-- Headless browser support (Playwright) for JavaScript-heavy sites
-- Supports videos (.mp4, .m3u8), audio, PDFs, images, and archives
-- Language and keyword filters
-- Subtitles auto-detection and download (.srt/.vtt)
-- Video conversion (e.g., .m3u8 → .mp4)
-- Smart guided CLI or Advanced power mode
-- Secure mode with virus warning and --agree requirement
-- Prevents .onion usage in beginner mode
+## 🚀 Features
 
-## Advanced Mode
+- 🔍 Simple CLI Interface
+- 🧠 Guided prompts with optional `--advanced` mode
+- 🎯 Filter by type: `--pdf`, `--zip`, `--audio`, `--video`, etc.
+- 📁 Queue system for downloading, viewing, and tracking
+- 📡 Uses Presearch, DuckDuckGo, and decentralized [SearxNG](https://searx.space/) instances
+- ⚠️ Built-in virus warning prompt (requires `--agree`)
+- 🧪 Experimental support for `.onion` links (Advanced mode only)
+- 💬 Supports subtitle downloads for videos (with language filter)
+- 📦 Auto-installs dependencies with progress bar
 
-Use `--advanced` to disable hand-holding and customize search/filter/download behavior. Required to allow scraping `.onion` domains.
+---
 
-## Onion Access
+## 🛠 Installation
 
-Accessing `.onion` domains is **disabled by default** for safety.
-If you are an advanced user and understand the risks:
-- Use `--advanced`
-- Use a TOR proxy/router like `torsocks` or TOR browser gateway
-- Consider setting `https_proxy` or `http_proxy` in your terminal to route traffic via TOR
-
-⚠️ NEVER access `.onion` domains without understanding legal and security implications.
-
-## Installation
+### Option 1: Python Package
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/NekoFetch.git
-cd NekoFetch
-python3 scraper.py --agree ...
+pip install --user .
 ```
 
-## Recommended Alias
+Then run it anywhere with:
 
 ```bash
-echo "alias nekofetch='python3 ~/NekoFetch/scraper.py'" >> ~/.zshrc
-source ~/.zshrc
+neko
 ```
 
-## License
+### Option 2: Easy Shell Installer
 
-MIT License. Built for educational and research use.
-"""
+```bash
+git clone https://github.com/YOURNAME/nekofetch.git
+cd nekofetch
+bash install.sh
+```
+
+Run with:
+
+```bash
+neko
+```
+
+---
+
+## 🧪 Advanced Mode
+
+```bash
+neko --advanced
+```
+
+Advanced mode disables safety rails and lets you:
+
+- Customize your search engine
+- Access `.onion` domains (Tor proxy/router required)
+- Change scraping depth, headers, and rules
+- Run direct links or advanced queries
+
+---
+
+## ⚠️ Safety Disclaimer
+
+NekoFetch **does not verify** file contents.
+
+> You **must** type `--agree` to confirm you're aware files may be harmful.  
+> Type `--disagree` to cancel and exit.
+
+---
+
+## 🌐 .onion / Tor Usage
+
+If you want to search `.onion` domains:
+
+- You must run in `--advanced` mode
+- You need to route traffic through [Tor](https://www.torproject.org/)
+- This feature is disabled by default for safety
+
+📖 [Tor Setup Guide (External)](https://tb-manual.torproject.org/)
+
+---
+
+## 🧷 Topics
+
+- `cli`
+- `scraper`
+- `downloader`
+- `file-search`
+- `pdf`
+- `video`
+- `tor`
+- `open-source`
+- `python3`
+- `terminal-tool`
+
+---
+
+## 📜 License
+
+[MIT License](LICENSE)
+
+---
+
+> NekoFetch is a personal experiment in open-source tooling and safe scraping. Not responsible for misuse.
